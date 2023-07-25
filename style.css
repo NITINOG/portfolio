@@ -388,8 +388,8 @@ imk{
 .box img {
 
   box-sizing: border-box;
-  max-width: 100%;
-  max-height: 100px; 
+  /* max-width: 100%;
+  max-height: 100px; */
   display: block;
   margin: 0 auto;
   flex-basis: 50%; 
@@ -405,4 +405,30 @@ imk{
 
 .hee{
   padding-bottom: 30px;
+}
+
+.box {
+  background: linear-gradient(300deg, #93dbfaa6, #ffffff, #6ef6e4a3);
+  background-size: 180% 180%;
+  animation: gradient-animation 5s ease infinite;
+}
+
+@keyframes gradient-animation {
+  
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media screen and (max-width: 611px) {
+  .box img {
+    max-width: 100%;
+    max-height: 100px;
+}
 }
